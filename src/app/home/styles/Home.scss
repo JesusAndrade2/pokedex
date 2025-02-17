@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.home {
+  background-image: url(/fondo.webp);
+  background-size: cover;
+  &__container{
+  padding: 1rem;
+  margin: 0 auto;
+  margin-block: 1rem;
+  display: grid;
+  place-content: center;
+  min-height: 100dvh;
+  max-width: 1200px;
+  }
+
+  &__pokedex {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 4px 4px 0px black, 
+                 8px 8px 0px #ff7b00;
+    letter-spacing: 5px;
+    padding-left: 2rem;
+
+
+    &-poke-o {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+    }
+
+    &-poke-o::after {
+      content: "p";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 20%;
+      left: -110%;
+  }
+  }
+
+  &__subtitle{
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1em;
+    font-weight: 900;
+    text-shadow: 4px 4px 0px black, 
+    6px 6px 0px #ff7b00;
+  
+  }
+
+  &__label { 
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 0.7em;
+    font-weight: 900;
+    color: #ededed;
+    text-shadow: 2px 2px 0px black,
+  }
+
+  &__input {
+    border: 1px solid #ff7b00;
+    width: 100%;
+    border-radius: 4px;
+    padding-left: .5em;
+    color: #ff7b00;
+    outline: none;
+    &::placeholder {
+      color: orangered;
+    }
+  }
+
+}
+
+@media (max-width: 412px ) {
+  .home {
+    &__pokedex {
+      letter-spacing: 3px;
+      font-size: 2em;
+
+      &-poke-o::after {
+        left: -65%;
+    }
+    }
+  }
+  
+}

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.pokemon {
+  max-width:800px;
+  margin:3em auto;
+  font-family:'Press Start 2P', sans-serif;
+
+
+  &__head {
+    margin-top: 3em;
+    height: 200px;
+    position:relative;
+
+    &--img {
+      width:14em;
+      margin: 0 auto ;
+      position:absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      filter: drop-shadow(0 0 20px #000000)drop-shadow(0 0 40px #ffffff)
+    }
+  }
+
+  &__info {
+    padding:2em;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+
+    &--id {
+      border:1px solid #f0f8ff78;
+      padding:.5em 
+    }
+
+    &--name {
+      margin-block: 1em;
+      display:flex;
+      align-items: center;
+
+      h2 {
+        padding-inline: 1em;
+      }
+      &-line{
+        width:15dvw;    
+        border-bottom:1px solid #f0f8ff78;
+        margin-inline: .5em;
+        box-shadow: 0 0 5px 0 #ffffff,0 0 10px 0 #ffffff ;
+      }
+    }
+
+    &--physical-dimensions {
+      display:flex;
+ 
+      &-box {
+        font-size:.6em;
+        padding-inline:.8em;
+        text-align:center;
+      }
+    }
+
+    &--type-habilities{
+      margin: 2em auto;
+      width: 80%;
+      justify-content: space-evenly;
+      display:flex;
+
+      &-box {
+        font-size:.7em;
+        padding-inline:.8em;
+        text-align:center;
+
+        &-title {
+          font-weight: 900;
+          font-size: .9em;
+          padding-bottom: .5em;
+        }
+      }
+    }
+  }
+
+  &__stats {
+    height: fit-content;
+    text-align: center;
+    max-width: 400px;
+    min-height: 240px;
+    font-size: .7em;
+    background-color: #00000039;
+    border-radius: 15px;
+    padding: 1em 2em;
+    box-shadow:0 0 5px 0 #ffffff,0 0 10px 0 #ffffff ;
+
+    h3{
+      font-size: 1;
+      font-weight: 900;
+      margin-bottom: 2em;
+      color:#4f6645;
+      text-shadow: 0 0 1px #ffffff, ;
+    }
+  }
+
+  &__movements {
+    max-height: 240px;
+    overflow-y: hidden;
+    overflow-y: scroll;
+    padding: 1em 2em ;
+    max-width: 400px;
+    font-size: .7em;
+    background-color: #00000039;
+    border-radius: 15px;
+    padding-left: 1em;    box-shadow:0 0 5px 0 #ffffff,0 0 10px 0 #ffffff ;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #00000000;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #ffffff3e;
+      border-radius:20px;
+    }
+
+    h3{
+      text-align: center;
+      font-size: 1;
+      font-weight: 900;
+      margin-bottom: 2em;
+      color:#4f6645;
+      text-shadow: 0 0 1px #ffffff,
+    }
+  }
+
+  &__stats-movements {
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap:2em;
+  }
+}
